@@ -9,6 +9,8 @@ def get_class():
     hour = strftime('%H', localtime())
     if (int(strftime('%M', localtime())) > 55):
         hour = str(int(hour) + 1)
+    if(len(hour) < 2):
+        hour = '0' + hour
     final = classes[hour].split(":")
     classes[hour] = str(int(final[0])+1)+":"+final[1]+":"+final[2]
     with open('classesbot.json', 'w') as json_file:
