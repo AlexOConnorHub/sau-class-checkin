@@ -29,5 +29,5 @@ web.go_to('https://myaccess.southern.edu/mvc/ats/Attendance/Check/' + myClass[0]
 web.type(secrets['username'], id="userNameInput")
 web.type(secrets['password'], id="passwordInput")
 web.click(id='submitButton')
-web.click(myClass[1], classname=myClass[2])
+web.click(text=myClass[1], classname=myClass[2])
 web.click(text='yes')
