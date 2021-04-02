@@ -76,4 +76,5 @@ response_last_auth_post = session.post(url=last_auth_url, data=last_auth_params)
 response = session.get(SEATING_CHECK_URL)
 soup = BeautifulSoup(response.content, features='lxml')
 seat_number = "online=No&seatId=" + myClass[1]
+print(seat_number)
 seating_response = session.post(url=SEATING_CHECK_URL, data=seat_number)
